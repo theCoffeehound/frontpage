@@ -1,0 +1,36 @@
+.login-form {
+    
+    /*  div:in keskitys */
+    width: 50%;
+    margin: auto;
+
+    /*      padding     */
+    padding: 50px;
+    
+    /*      grid määrittelyt        */
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    
+
+    background-color: rgba(99, 99, 99, 0.896);
+}
+
+.login-form-user {
+    margin: 30px;
+}
+
+.login-form-label {
+    text-align: left;
+    font-size: large;
+}
+
+.login-form-input {
+    justify-content: center;
+    width: 80%;
+}
+
+.nappi{
+    margin-top: 50px;
+}

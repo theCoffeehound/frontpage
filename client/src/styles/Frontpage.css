@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2");
+
+.frontpage > h1, h2{
+    font-family: 'Courier Prime', monospace;
+}

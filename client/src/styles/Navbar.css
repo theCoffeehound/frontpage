@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2");
+
+/*  
+
+    Navigation bar on kiinni yläosassa.
+    Ilman tätä h1 (ja ehkä muutkin) jättävät 21px marigin
+
+*/
+.navigation-bar > *{
+    margin: 0px;
+}
+
+.navigation-bar {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.navigation-bar-title {
+    font-size:larger;
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier Prime', monospace;
+    margin-inline: 10px;
+    margin-block: 5px;
+    text-align: left;
+}
+
+.navigation-bar-login {
+    font-size: medium;
+    margin-block: 5px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    justify-items: center;
+}
+
+.navigation-bar-login > a {
+    margin: 5px;
+}
