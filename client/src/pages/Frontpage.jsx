@@ -11,7 +11,7 @@ function Frontpage() {
                     <h1>Hei siellä!</h1>
                     <h2>Tervetuloa minun nettisivulleni!</h2>
                 </div>
-            </div>
+            </div>  
         </div>
     );
 };
