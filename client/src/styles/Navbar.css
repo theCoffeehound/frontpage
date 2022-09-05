@@ -21,7 +21,10 @@
     font-size:larger;
     color: white;
     text-decoration: none;
-    font-family: 'Courier Prime', monospace;
+    font-family: monospace;
+    /*
+        'Courier Prime', 'Courier Prime', 
+    */
     margin-inline: 10px;
     margin-block: 5px;
     text-align: left;

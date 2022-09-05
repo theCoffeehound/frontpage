@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../components/Login";
+import Register from "../components/Register";
 
 
 function Authentication(){
@@ -8,6 +9,7 @@ function Authentication(){
         <div className="container">
             <div className="formi-container">
                 <Login />
+                <Register />
             </div>
             <div className="teksti">
 

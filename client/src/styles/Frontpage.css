@@ -1,5 +1,38 @@
-@import url("https://fonts.googleapis.com/css2");
+@import url("https://fonts.googleapis.com/");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu|Audiowide|Sofia|Trirong|Cutive");
+@import url("https://fonts.google.com/css?family=Cutive");
 
 .frontpage > h1, h2{
-    font-family: 'Courier Prime', monospace;
+    /* font-family: 'Courier Prime', monospace; */
+}
+
+body{
+    background-color: #294769;
+}
+
+#otsikko-kuva{
+    position: relative;
+    display: grid;
+}
+
+#otsikko-kuva img{  
+    width: 100%;
+    z-index: 0;
+}
+#kuvateksti {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 30%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: "Cutive", monospace;
+    /*  font-family: 'Fira Sans', sans-serif;   */
+    /* font-style: italic; */
+}
+
+#kuvateksti h1, h2 {
+    text-align: center;
+    color: white;
+    opacity: 1;
 }

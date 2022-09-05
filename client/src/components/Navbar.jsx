@@ -8,7 +8,7 @@ function Navbar(){
     return(
         <div className='navigation-bar'>
             <Link className='navigation-bar-title' to="/">Frontpage</Link>
-            <Link className="navigation-bar-login" to="/login">Login</Link>
+            <Link className="navigation-bar-login" to="/authentication">Login</Link>
         </div>
     );
 };
