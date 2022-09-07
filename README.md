@@ -8,7 +8,7 @@ Frontpage on henkilökohtaiseen käyttöön tuleva nettisivu, johon kasaan itsel
 
 
 ### Client
-- npm install react-router-dom
+- npm install react-router-dom axios
 
 ### Backend
 - npm install cors express mongoose nodemon dotenv

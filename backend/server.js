@@ -9,12 +9,15 @@ require('dotenv').config({ path: "./config.env" });
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "localhost:3000"}));
+app.use(cors({ origin: "http://localhost:3000"}));
 
 
 //  Routet
 const testRoutes = require('./routes/test-routes');
+const userRoutes = require('./routes/userRoutes.js');
+
 app.use('/api/test', testRoutes);
+app.use('/api/user', userRoutes);
 
 
 

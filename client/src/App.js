@@ -10,18 +10,23 @@ import Frontpage from './pages/Frontpage';
 import Authentication from './pages/Authenticate';
 import Borke from './pages/Borke';
 
+import { UserProvider } from './contexts/UserContext';
+
+
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path='/' element={ <Frontpage /> } />
-          <Route path='/authentication' element={ <Authentication /> } />
-          <Route path='/*' element={<Borke />} />
-        </Routes>
+        <UserProvider>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={ <Frontpage /> } />
+            <Route path='/authentication' element={ <Authentication /> } />
+            <Route path='/*' element={<Borke />} />
+          </Routes>
+        </UserProvider>
       </div>
     </Router>
   );
