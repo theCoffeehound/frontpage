@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import '../styles/Login.css';
 
+import { UserContext, UserProvider } from "../contexts/UserContext";
+import { Link } from "react-router-dom";
+
+
 function Login() {
+
+
+    const { logorreg, setLogorreg } = useContext(UserContext);
     return (
         <div className="login">
             <h1>Login</h1>
@@ -13,6 +20,9 @@ function Login() {
                     <div className="nappi-container">
                         <button type="submit">Kirjaudu</button>
                     </div>
+            </div>
+            <div>
+                <span>Eikö sinulla ole vielä tiliä? <button onClick={() => {setLogorreg(false); console.log(`${logorreg}`)}}>Luo se nyt!</button></span>
             </div>
         </div>
     );

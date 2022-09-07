@@ -16,6 +16,12 @@ export const UserProvider = ({ children }) => {
         haku_uid: ""
     });
 
+    const [logorreg, setLogorreg] = useState(
+        {
+            logorreg_state: false
+        }
+    );
+
     const [muokkaus, setMuokkaus] = useState({
         muokkaus_url: "/",
         muokkaus_storyid: "",
@@ -28,7 +34,7 @@ export const UserProvider = ({ children }) => {
     });
 
     return(
-        <UserContext.Provider value={{user, setUser, haku, setHaku, muokkaus, setMuokkaus}}>
+        <UserContext.Provider value={{user, setUser, haku, setHaku, muokkaus, setMuokkaus, logorreg, setLogorreg}}>
             { children }
         </UserContext.Provider>
     );
