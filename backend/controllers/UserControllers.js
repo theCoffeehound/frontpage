@@ -30,7 +30,7 @@ const register = (req, res, next) => {
         uid,
         username,
         email,
-        salasana,
+        salasana
     });
 
     newUser.save()
