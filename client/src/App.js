@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Frontpage from './pages/Frontpage';
 import Authentication from './pages/Authenticate';
 import Borke from './pages/Borke';
+import Data from './pages/Data';
 
 import { UserProvider } from './contexts/UserContext';
 
@@ -16,6 +17,9 @@ import { UserProvider } from './contexts/UserContext';
 
 
 function App() {
+
+
+
   return (
     <Router>
       <div className="App">
@@ -23,6 +27,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={ <Frontpage /> } />
+            <Route path="/data" element={ <Data /> } />
+            <Route path="/user" element={ <Data /> } />
             <Route path='/authentication' element={ <Authentication /> } />
             <Route path='/*' element={<Borke />} />
           </Routes>

@@ -13,7 +13,7 @@ function Login() {
 
   const nav = useNavigate();
 
-  const { user, setUser} = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,12 +24,29 @@ function Login() {
         //  Backendissä tarkastetaan täsmäävätkö email ja salasana
         //  Tämän jälkeen asetetaan useContextiin user_id, nimi, sekä loginState
         if (res.data.message === "Right password") {
-          setUser({
-            con_uid: res.data.user.uid,
-            con_nimi: res.data.user.nimi,
-            con_loginState: true,
-          });
 
+            console.log(res.data);
+        
+            console.log("Username: ",res.data.user.username);
+          
+            setUser(
+                {
+                    con_uid: res.data.user.uid,
+                    con_nimi: res.data.user.username,
+                    con_loginState: true,
+                }
+            );
+
+            const d = new Date();
+            d.setTime(d.getTime());
+
+            var now = new Date();
+            now.setTime(now.getTime() + 1 * 3600 * 1000);
+
+            console.log(user.con_nimi);
+            document.cookie = `login_token=${res.data.user.username}_${d.getTime()}; expires=${now}; path=/`;
+            console.log({now})
+          
           //  Lopuksi viedään käyttäjä etusivulle
           nav("/");
         } else console.log("Kirjautuminen epäonnistui!");
@@ -38,7 +55,9 @@ function Login() {
   };
 
   const handleChange = () => {
-    return console.log(`Username:${username}, Email:${email}, Salasana:${salasana}`);
+    return console.log(
+      `Username:${username}, Email:${email}, Salasana:${salasana}`
+    );
   };
 
   const { logorreg, setLogorreg } = useContext(UserContext);
@@ -46,12 +65,18 @@ function Login() {
   return (
     <div className="login">
       <h1>Login</h1>
-      <form className="login-form" onSubmit={handleSubmit} onChange={handleChange}>
+      <form
+        className="login-form"
+        onSubmit={handleSubmit}
+        onChange={handleChange}
+      >
         <label className="login-form-label">Sähköposti : </label>
-        <input 
-            className="login-form-input" 
-            type="text" 
-            onChange={(e) => {setEmail(e.target.value)}} 
+        <input
+          className="login-form-input"
+          type="text"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
         />
         <label className="login-form-label">Salasana : </label>
         <input
@@ -59,7 +84,9 @@ function Login() {
           type="password"
           name="salasana"
           id="salasana"
-          onChange={(e) => {setSalasana(e.target.value)}} 
+          onChange={(e) => {
+            setSalasana(e.target.value);
+          }}
         />
         <button type="submit">Kirjaudu</button>
       </form>

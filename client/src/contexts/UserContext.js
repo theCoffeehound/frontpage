@@ -8,6 +8,7 @@ export const UserProvider = ({ children }) => {
     const [user, setUser] = useState({
         con_uid: "",
         con_nimi: "",
+        con_token: "",
         con_loginState: false
     });
 

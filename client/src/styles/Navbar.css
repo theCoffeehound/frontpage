@@ -11,10 +11,15 @@
 }
 
 .navigation-bar {
+    z-index: 10;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: black;
     color: white;
     display: grid;
-    grid-template-columns: 9fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .navigation-bar-title {
@@ -30,15 +35,54 @@
     text-align: left;
 }
 
+.navigation-bar-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.navigation-bar-links{
+    color: white;
+    font-size: medium;
+    margin-block: 5px;
+    text-align: start;
+    text-decoration: none;
+    justify-content: flex-start;
+}
+
+
+
+.navigation-bar-link{
+    color: white;
+    font-size: medium;
+    margin-block: 5px;
+    text-align: start;
+    text-decoration: none;
+    justify-content: flex-start;
+}
+
 .navigation-bar-login {
     font-size: medium;
     margin-block: 5px;
-    text-align: center;
+    margin-right: 15px;
+    text-align: end;
     color: white;
     text-decoration: none;
-    justify-items: center;
+    justify-content: flex-end;
 }
+
 
 .navigation-bar-login > a {
     margin: 5px;
+}
+
+
+.navigation-bar-logout{  
+    right: 0;
+    font-size: medium;
+    margin-block: 5px;
+    margin-right: 15px;
+    text-align: end;
+    color: white;
+    text-decoration: none;
+    justify-content: flex-end;
 }

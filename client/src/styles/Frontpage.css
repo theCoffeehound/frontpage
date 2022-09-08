@@ -4,9 +4,11 @@
 
 .frontpage > h1, h2{
     /* font-family: 'Courier Prime', monospace; */
+
 }
 
 body{
+    margin-top: 30px;
     background-color: #294769;
 }
 
@@ -18,21 +20,17 @@ body{
 #otsikko-kuva img{  
     width: 100%;
     z-index: 0;
+    text-align: center;
 }
 #kuvateksti {
     position: absolute;
+    color: white;
     left: 25%;
     right: 25%;
     top: 30%;
-    z-index: 10;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
     font-family: "Cutive", monospace;
     /*  font-family: 'Fira Sans', sans-serif;   */
     /* font-style: italic; */
-}
-
-#kuvateksti h1, h2 {
-    text-align: center;
-    color: white;
-    opacity: 1;
 }

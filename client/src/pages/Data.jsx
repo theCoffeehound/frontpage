@@ -4,7 +4,7 @@ import '../styles/Data.css';
 function Data() {
 
     return(
-        <>
+        <div className="data-body">
             <table>
                 <thead>
                     <tr>
@@ -21,6 +21,8 @@ function Data() {
                     </tr>
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }
+
+export default Data;
