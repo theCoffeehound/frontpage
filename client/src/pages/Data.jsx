@@ -1,7 +1,12 @@
 import React from "react";
 import '../styles/Data.css';
+import CookieFetcher from "../components/cookieFetch";
 
 function Data() {
+
+    CookieFetcher();
+
+
 
     return(
         <div className="data-body">

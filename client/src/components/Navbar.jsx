@@ -22,7 +22,7 @@ function Navbar(){
 
     return(
         <div className='navigation-bar'>
-            <Link className='navigation-bar-title' to="/">Frontpage</Link>
+            <Link className='navigation-bar-title' to="/">Personal home page</Link>
             { user.con_token ?  <div className='navigation-bar-items'> <div className='navigation-bar-links'><Link className='navigation-bar-link' to="/data">Data</Link> | <Link className='navigation-bar-link' to="/user">User</Link></div> <Link className='navigation-bar-logout' to="/" onClick={Logout} >Kirjaudu Ulos</Link></div> : <Link className="navigation-bar-login" to="/authentication">Login</Link>}
         </div>
     );

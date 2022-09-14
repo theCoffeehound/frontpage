@@ -10,6 +10,7 @@ import Frontpage from './pages/Frontpage';
 import Authentication from './pages/Authenticate';
 import Borke from './pages/Borke';
 import Data from './pages/Data';
+import User from './pages/User';
 
 import { UserProvider } from './contexts/UserContext';
 
@@ -28,7 +29,7 @@ function App() {
           <Routes>
             <Route path='/' element={ <Frontpage /> } />
             <Route path="/data" element={ <Data /> } />
-            <Route path="/user" element={ <Data /> } />
+            <Route path="/user" element={ <User /> } />
             <Route path='/authentication' element={ <Authentication /> } />
             <Route path='/*' element={<Borke />} />
           </Routes>
