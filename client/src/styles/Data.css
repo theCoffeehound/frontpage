@@ -1,22 +1,66 @@
-tr:nth-child(even) {
-    background-color: #dddddd;
+.container{
+    margin: 0px;
 }
-
 .data-body{
-    margin:0px;
-    background-color: #171714;
-    padding: 100px;
+    margin:100px;
+    /* background-color: #171714; */
     color:white;
 }
 
+
+
 .data-table{
-    background-color: white;
+    width: 75%;
+    /* background-color: white; */
     color: black;
     margin: 10px;
     text-align: center;
     margin-inline: auto;
 }
 
-.data-table > {
-    padding: 10px;
+
+
+/************************************************************************/
+/*
+    TÄMÄ ON SIT AIKA S####AN TÄRKEÄ TUON BORDERIN TOIMIMISEN KANNALTA :)
+*/
+/************************************************************************/
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+/************************************************************************/
+
+
+.border th {
+    border: 1px solid black;
+}
+
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+td{
+    padding: 30px;
+    border: 1px solid black;
+}
+
+
+.data-table > *{
+    text-align: center;
+}
+
+
+.button-container{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 75%;
+    margin-inline: auto;
+}
+
+.add-button{
+    font-size: 1em;
+    width: 10em;
+    height: auto;
 }

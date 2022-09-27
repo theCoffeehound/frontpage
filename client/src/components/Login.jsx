@@ -44,7 +44,7 @@ function Login() {
             now.setTime(now.getTime() + 1 * 3600 * 1000);
 
             console.log(user.con_nimi);
-            document.cookie = `login_token=${res.data.user.username}_${d.getTime()}; expires=${now}; path=/`;
+            document.cookie = `login_token=${res.data.user.username}; expires=${now}; path=/`;
             console.log({now})
           
           //  Lopuksi viedään käyttäjä etusivulle
