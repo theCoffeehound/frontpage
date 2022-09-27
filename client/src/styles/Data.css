@@ -3,5 +3,20 @@ tr:nth-child(even) {
 }
 
 .data-body{
-    background-color: aqua;
+    margin:0px;
+    background-color: #171714;
+    padding: 100px;
+    color:white;
+}
+
+.data-table{
+    background-color: white;
+    color: black;
+    margin: 10px;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.data-table > {
+    padding: 10px;
 }
