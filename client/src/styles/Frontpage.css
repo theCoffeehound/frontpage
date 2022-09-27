@@ -7,9 +7,11 @@
 
 }
 
+.frontpage{
+}
+
 body{
     margin-top: 30px;
-    background-color: #294769;
 }
 
 #otsikko-kuva{
@@ -19,7 +21,7 @@ body{
 
 #otsikko-kuva img{  
     width: 100%;
-    z-index: 0;
+    z-index: 1;
     text-align: center;
 }
 #kuvateksti {
@@ -33,4 +35,11 @@ body{
     font-family: "Cutive", monospace;
     /*  font-family: 'Fira Sans', sans-serif;   */
     /* font-style: italic; */
+}
+
+#lore-ipsum{
+    margin-top: 5em;
+    padding: 10px;
+    margin-inline: auto;
+    width: 75%;
 }

@@ -15,9 +15,11 @@ app.use(cors({ origin: "http://localhost:3000"}));
 //  Routet
 const testRoutes = require('./routes/test-routes');
 const userRoutes = require('./routes/userRoutes.js');
+const itemRoutes = require('./routes/itemRoutes.js');
 
 app.use('/api/test', testRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/item', itemRoutes);
 
 
 

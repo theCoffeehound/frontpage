@@ -23,6 +23,11 @@ function CookieFetcher() {
         return "";
     };
 
+
+
+
+
+
     useEffect(() => {
         fetchCookies();
         document.cookie = `testi=${fetchCookies()}`;
@@ -33,9 +38,11 @@ function CookieFetcher() {
             setUser({
                 con_token: fetchCookies(),
             });
-            console.log(user.con_token);
-            console.log("last");
+            console.log("cookieFetch last debug");
         } else console.log("Sory boys no bonus!");
+
+
+
     }, []);
 }
 

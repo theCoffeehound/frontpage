@@ -1,0 +1,20 @@
+.formi{
+
+    width: 25%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formi-item{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-block: 0.4em;
+}
+
+.formi-item > * {
+    width: 75%;
+    margin-inline: auto;
+}
