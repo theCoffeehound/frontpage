@@ -44,4 +44,4 @@ mongoose
         console.log("Error tietokantaan yhditettäessä: \n",err)
     });
 
-app.listen(80, "https://external.api.yle.fi/v1/teletext/pages/100.json?app_id=" + process.env.app_id + "&" + "app_key=" + process.env.app_key)
+//  app.listen(80, "https://external.api.yle.fi/v1/teletext/pages/100.json?app_id=" + process.env.app_id + "&" + "app_key=" + process.env.app_key)
