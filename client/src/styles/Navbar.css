@@ -10,19 +10,23 @@
     margin: 0px;
 }
 
+
+/*
+    Navbaari pakotetaan "päällimäiseksi" z-indexillä
+*/
 .navigation-bar {
-    z-index: 10;
-    height: 30px;
-    position: fixed;
+    height: 4rem;
     top: 0;
     width: 100%;
-    background-color: black;
+    background-color: #343A40;
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .navigation-bar-title {
+    display: flex;
+    align-items:center;
     font-size:larger;
     color: white;
     text-decoration: none;
@@ -61,6 +65,8 @@
 }
 
 .navigation-bar-login {
+    display: flex;
+    align-items:center;
     font-size: medium;
     margin-block: 5px;
     margin-right: 15px;
