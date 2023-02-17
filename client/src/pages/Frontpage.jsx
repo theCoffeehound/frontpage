@@ -7,7 +7,7 @@ function Frontpage() {
   const { user, setUser } = useContext(UserContext);
 
 
-
+  // keksien haku
   const fetchCookies = () => {
 
     let name = "login_token" + "=";
@@ -31,7 +31,7 @@ function Frontpage() {
 
   }
 
-
+  //  Sivun latautumisen aikana tehtävät toimet
   useEffect(() => {
     fetchCookies();
     document.cookie = `testi=${fetchCookies()}`;
@@ -56,21 +56,17 @@ function Frontpage() {
 
   return (
     <div className='frontpage'>
-      <div id="otsikko-kuva">
-        <img src={kuva} alt='this is where phot should is' width={"100%"} />
-        <div className='center' id="kuvateksti">
-          <h1>Hei siellä!</h1>
-          <h2>Tervetuloa minun nettisivulleni!</h2>
-        </div>
+      <div className='otsikko'>
+        <h1>Hyvää huomenta!</h1>
       </div>
-      <div id="lore-ipsum">
-        <h1>HTML Ipsum Presents</h1>
-
-        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-        <h2>Header Level 2</h2>
-
-
+      <div className='bookmarks-container'>
+        <div className='bookmarks'>
+            <a className='linkki' id='yt' href="https://www.youtube.com">YouTube</a>
+            <a className='linkki' id='yle' href="https://www.yle.fi">Yle</a>
+            <a className='linkki' id='reddit' href="https://www.reddit.com">Reddit</a>
+            <a className='linkki' id='mail' href="https://www.mail.google.com">Mail</a>
+            <a className='linkki' id='dim' href="https://app.destinyitemmanager.com">DIM</a>
+        </div>
       </div>
     </div>
   );
