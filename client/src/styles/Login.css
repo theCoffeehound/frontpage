@@ -35,7 +35,6 @@
 
 .login-form-input {
     width: 95%;
-    border-radius: 5px;
 }
 
 .nappi-container{
@@ -43,6 +42,15 @@
 
 }
 
+.login-form-input[type=text]{
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+.login-form-input[type=password]{
+    border: none;
+    border-bottom: 2px solid red;
+}
 
 button {
     right: 0px;
