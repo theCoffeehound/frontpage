@@ -64,7 +64,7 @@ function Login() {
 
   return (
     <div className="login">
-      <h1>Login</h1>
+      <h1 className="title">Login</h1>
       <form
         className="login-form"
         onSubmit={handleSubmit}
@@ -88,12 +88,13 @@ function Login() {
             setSalasana(e.target.value);
           }}
         />
-        <button type="submit">Kirjaudu</button>
+        <button type="submit" id="login-btn">Kirjaudu</button>
       </form>
-      <div>
+      <div id="register-text">
         <span>
-          Eikö sinulla ole vielä tiliä?{" "}
+          Eikö sinulla ole vielä tiliä?
           <button
+            id="register-btn"
             onClick={() => {
               setLogorreg(false);
               console.log(`${logorreg}`);

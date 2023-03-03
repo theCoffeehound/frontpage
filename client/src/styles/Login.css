@@ -1,27 +1,38 @@
 .login{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+
+
+    margin-inline: auto;
     margin-top: 100px;
+    width: 100%;
+    text-align: center;
 }
 
 
 .login-form {
     
     /*  div:in keskitys */
-    width: 50%;
+    width: 40rem;
     margin: auto;
 
     /*      padding     */
-    padding: 50px;
+    padding: 25px;
     
     /*      grid määrittelyt        */
     display: grid;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 33% 66%;
     grid-template-rows: auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     
 
     background-color: rgba(192, 192, 192, 0.896);
-    border-radius: 15px;
+    border-radius: 2px;
+
+    background-color: white;
+
 }
 
 .login-form-user {
@@ -29,7 +40,7 @@
 }
 
 .login-form-label {
-    text-align: center;
+    text-align: left;
     font-size: large;
 }
 
@@ -52,6 +63,21 @@
     border-bottom: 2px solid red;
 }
 
-button {
-    right: 0px;
+.title{
+    margin-bottom: 25px;
+}
+
+#login-btn {
+    margin-top: 50px;
+    margin-inline: auto;
+    width: 100%;
+    grid-column: auto / span 2;
+}
+
+#register-text{
+    margin-top: 25px;
+}
+
+#register-btn{
+    margin-inline-start: 10px;
 }
