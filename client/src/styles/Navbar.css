@@ -18,7 +18,8 @@
     height: 4rem;
     top: 0;
     width: 100%;
-    background-color: #343A40;
+    background-color: black;
+    /* background-color: #343A40; */
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;

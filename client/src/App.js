@@ -13,7 +13,7 @@ import Borke from './pages/Borke';
 import Data from './pages/Data';
 import User from './pages/User';
 import AddItem from './pages/AddItem';
-import Home from './pages/Home';
+
 
 import { UserProvider } from './contexts/UserContext';
 
@@ -35,7 +35,6 @@ function App() {
             <Route path='/data' element={ <Data /> } />
             <Route path='/data/add' element={ <AddItem /> } />
             <Route path='/user' element={ <User /> } />
-            <Route path='/home' element={ <Home /> } />
             <Route path="/testi" element={ <Testi /> } />
             <Route path='/authentication' element={ <Authentication /> } />
             <Route path='/*' element={<Borke />} />

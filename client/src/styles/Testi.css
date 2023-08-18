@@ -1,0 +1,34 @@
+.testiBody .karuselli-container{
+    background-color: aqua;
+    height: auto;
+}
+
+.testiBody .bookmarks-container a{
+    padding-right: 10px;
+}
+.testiBody .bookmarks-container a:last-child{
+    padding-right: 0px;
+}
+.testiBody{
+    background-color: rgba(0, 0, 0, 0.785);
+    text-align: center;
+    color: azure;
+}
+
+
+.testiBody .bottom-container{
+    width: 100%;
+    display: flex;
+}
+
+.testiBody .something-else{
+    width: 50%;
+}
+
+.testiBody .news-image-border{
+    width: 50%;
+    padding-inline: 10px;
+    border-style: none none none solid;
+    border-width: 1px;
+    border-color: rgb(131, 131, 131);
+}
