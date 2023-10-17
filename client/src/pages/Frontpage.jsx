@@ -53,9 +53,23 @@ function Frontpage() {
   }, []);
 
 
+  const FrontUI = () => {
+    return (
+      <div className='frontpage'>
+        
+        <h1>HELLO!</h1>
+      </div>
+    );
+  };
+
+
 
   return (
+
+    
     <div className='frontpage'>
+      <FrontUI />
+      {/* <FrontUI />
       <div className='otsikko'>
         <h1>Hyvää huomenta!</h1>
       </div>
@@ -67,7 +81,7 @@ function Frontpage() {
             <a className='linkki' id='mail' href="https://www.mail.google.com">Mail</a>
             <a className='linkki' id='dim' href="https://app.destinyitemmanager.com">DIM</a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
+import burger from '../images/white-burger.png';
 
 import { UserContext } from "../contexts/UserContext";
 
 
-function Navbar(){
+function Navbar() {
 
     const { user, setUser } = useContext(UserContext);
     const { logorreg, setLogorreg } = useContext(UserContext);
 
     const Logout = () => {
-        document.cookie="login_token=;expires=Thu, 01 Jan 1970"
+        document.cookie = "login_token=;expires=Thu, 01 Jan 1970"
         setUser(
             {
                 con_token: null
@@ -20,10 +21,47 @@ function Navbar(){
     };
 
 
-    return(
-        <div className='navigation-bar'>
-            <Link className='navigation-bar-title' to="/">Personal home page</Link>
-            { user.con_token ?  <div className='navigation-bar-items'> <div className='navigation-bar-links'><Link className='navigation-bar-link' to="/data">Data</Link> | <Link className='navigation-bar-link' to="/user">User</Link></div> <Link className='navigation-bar-logout' to="/" onClick={Logout} >Kirjaudu Ulos</Link></div> : <Link className="navigation-bar-login" to="/authentication">Login</Link>}
+    function burgerFunction() {
+        var x = document.getElementById("burger-menu");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "flex";
+        }
+    }
+
+    return (
+        <div className='kontti'>
+            <div className='navigation-bar'>
+                <div className='vasen-ui'>
+                    <img className='burger-icon' src={burger} alt="burger-menu-icon" onClick={burgerFunction} />
+                    <Link className='navigation-bar-title navigation-bar-link' to="/">Personal home page</Link>
+                </div>
+
+                <div className='oikea-ui'>
+                    {
+                        user.con_token ?
+                            <Link className='navigation-bar-logout navigation-bar-link' to="/" onClick={Logout} >Kirjaudu Ulos</Link>
+                            : <Link className="navigation-bar-login navigation-bar-link" to="/authentication">Login</Link>
+                    }
+                </div>
+
+            </div>
+            <div id="burger-menu" className='burger-menu'>
+                {
+                    user.con_token
+                        ?
+                        <>
+                            <Link className='burger-link' to="/home" onClick={burgerFunction}>alt home</Link>
+                            <Link className='burger-link' to="/uutiset" onClick={burgerFunction}>Uutiset</Link>
+                            <Link className='burger-link' to="/data" onClick={burgerFunction}>Projektien hallinta</Link>
+                            <Link className='burger-link' to="/user" onClick={burgerFunction}>User</Link>
+                            <Link className='burger-link' to="/data" onClick={burgerFunction}>Käyttöjärjestelmä taulukko</Link>
+                        </>
+                        :
+                        <Link className='burger-link' to="/uutiset" onClick={burgerFunction}>Uutiset</Link>
+                }
+            </div>
         </div>
     );
 };

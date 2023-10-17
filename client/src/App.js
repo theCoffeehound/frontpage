@@ -12,6 +12,7 @@ import Authentication from './pages/Authenticate';
 import Borke from './pages/Borke';
 import Data from './pages/Data';
 import User from './pages/User';
+import Uutiset from './pages/Uutiset';
 import AddItem from './pages/AddItem';
 import Home from './pages/Home';
 
@@ -35,6 +36,7 @@ function App() {
             <Route path='/data' element={ <Data /> } />
             <Route path='/data/add' element={ <AddItem /> } />
             <Route path='/user' element={ <User /> } />
+            <Route path='/uutiset' element={ <Uutiset /> } />
             <Route path='/home' element={ <Home /> } />
             <Route path="/testi" element={ <Testi /> } />
             <Route path='/authentication' element={ <Authentication /> } />

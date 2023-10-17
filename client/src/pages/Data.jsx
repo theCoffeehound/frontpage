@@ -64,7 +64,7 @@ function Data() {
     };
 
     return (
-        <div className="container">
+        <div className="data-container">
             <div className="data-body">
                 <div className="button-container">
                     <button className="add-button">

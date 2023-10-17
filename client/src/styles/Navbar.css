@@ -1,13 +1,24 @@
 @import url("https://fonts.googleapis.com/css2");
 
+
 /*  
 
     Navigation bar on kiinni yläosassa.
     Ilman tätä h1 (ja ehkä muutkin) jättävät 21px marigin
 
 */
-.navigation-bar > *{
+body {
     margin: 0px;
+}
+
+.navigation-bar>* {
+    margin: 0px;
+    width: 100%;
+}
+
+.kontti {
+    margin: 0px;
+    width: 100%;
 }
 
 
@@ -15,7 +26,6 @@
     Navbaari pakotetaan "päällimäiseksi" z-indexillä
 */
 .navigation-bar {
-    height: 4rem;
     top: 0;
     width: 100%;
     background-color: #343A40;
@@ -24,71 +34,99 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.vasen-ui {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+.oikea-ui {
+    display: flex;
+    justify-content: end;
+    padding-inline: 10px;
+}
+
+#etusivulla,
+#projekteissa {
+    border-color: #e3874f;
+    border-style: none none solid;
+}
+
+.navigation-bar {
+    width: 100%;
+    /* position: relative; */
+    text-align: center;
+    margin-top: 0px;
+    padding-block: 15px;
+    background-color: #080807;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navigation-bar-link {
+    padding: 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navigation-bar-link:hover {
+    color: #bcbcbc;
+    background-color: #343a4093;
+}
+
+.burger-icon {
+    margin: 10px;
+    margin-inline: 15px;
+    width: 2rem;
+}
+
+.burger-icon:hover {
+    color: #bcbcbc;
+    background-color: #343a4093;
+}
+
 .navigation-bar-title {
     display: flex;
-    align-items:center;
-    font-size:larger;
+}
+
+#burger-menu {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    display: none;
+    flex-direction: column;
+    flex-grow:inherit;
+    align-items: stretch;
+    width: 33%;
+    height: fit-content;
+    padding: 0px;
+    z-index: 1;
+    position:absolute;
+    left: 0;
+    top: 1;
+    margin-top: 0px;
     color: white;
-    text-decoration: none;
-    font-family: monospace;
-    /*
-        'Courier Prime', 'Courier Prime', 
-    */
-    margin-inline: 10px;
-    margin-block: 5px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(65, 65, 65, 0.9);
+    transition: 0.5s;
+}
+
+.burger-link{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin:0px;
+    padding: 10px;
+    width: 100%;
+    height:fit-content;
     text-align: left;
-}
-
-.navigation-bar-items{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.navigation-bar-links{
-    color: white;
-    font-size: medium;
-    margin-block: 5px;
-    text-align: start;
     text-decoration: none;
-    justify-content: flex-start;
+    color: #ffffff;
 }
 
+.burger-link:nth-child(odd){
+    background-color: rgba(43, 43, 43, 0.9);
 
-
-.navigation-bar-link{
-    color: white;
-    font-size: medium;
-    margin-block: 5px;
-    text-align: start;
-    text-decoration: none;
-    justify-content: flex-start;
 }
-
-.navigation-bar-login {
-    display: flex;
-    align-items:center;
-    font-size: medium;
-    margin-block: 5px;
-    margin-right: 15px;
-    text-align: end;
-    color: white;
-    text-decoration: none;
-    justify-content: flex-end;
-}
-
-
-.navigation-bar-login > a {
-    margin: 5px;
-}
-
-
-.navigation-bar-logout{  
-    right: 0;
-    font-size: medium;
-    margin-block: 5px;
-    margin-right: 15px;
-    text-align: end;
-    color: white;
-    text-decoration: none;
-    justify-content: flex-end;
+.burger-link:nth-child(even){
+    background-color: rgba(65, 65, 65, 0.9);
 }
