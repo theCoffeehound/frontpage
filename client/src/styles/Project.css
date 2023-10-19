@@ -1,0 +1,23 @@
+.Project{
+    background-color: #3c4652;
+
+}
+
+.project-name{
+    text-align: center;
+}
+
+.project-info{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: baseline;
+    width: 50%;
+    margin-inline: auto;
+}
+
+.project-title{
+    text-align: right;
+    padding-right: 10px;
+}

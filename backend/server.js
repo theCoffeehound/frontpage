@@ -13,18 +13,23 @@ app.use(cors({ origin: "http://localhost:3000"}));
 
 
 //  Routet
+const projectRoutes = require('./routes/projectRoutes');
 const testRoutes = require('./routes/test-routes');
 const userRoutes = require('./routes/userRoutes.js');
 const itemRoutes = require('./routes/itemRoutes.js');
 //const uutisetRoutes = require('./routes/uutisetRoutes.js');
 
+// ROUTES
+app.use("/api/projects", projectRoutes);
 app.use('/api/test', testRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/item', itemRoutes);
 // app.use('/api/yle', uutisetRoutes);
+/*
 app.get('/api/yle/', function(req, res){
     res.send("Moi")
 });
+*/
 
 console.log(`********************************************************`);
 console.log(`*                                                      *`);

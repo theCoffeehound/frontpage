@@ -15,8 +15,13 @@ import User from './pages/User';
 import Uutiset from './pages/Uutiset';
 import AddItem from './pages/AddItem';
 import Home from './pages/Home';
+import ProjectManager from './pages/ProjectManager/ProjectManager';
+import Project from './pages/ProjectManager/Project';
+
+
 
 import { UserProvider } from './contexts/UserContext';
+
 
 
 
@@ -33,6 +38,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={ <Frontpage /> } />
+            <Route path='/projectmanager' element={ <ProjectManager /> } />
+            <Route path='/projectmanager/project/:id' element={ <Project /> } />
             <Route path='/data' element={ <Data /> } />
             <Route path='/data/add' element={ <AddItem /> } />
             <Route path='/user' element={ <User /> } />

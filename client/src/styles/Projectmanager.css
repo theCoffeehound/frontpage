@@ -1,0 +1,149 @@
+.Main-screen{
+    margin-top: 0px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #3c4652;
+}
+
+
+
+.main-title{
+    font-size: 64px;
+}
+
+
+
+.add-container{
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    width: 30%;
+    margin-block: 50px;
+}
+.addbtn{
+    height: 32px;
+}
+
+
+
+
+/*
+    BOXES
+*/
+.box-container{
+    border-style: dashed;
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box h3{
+    width: 75%;
+    margin-top: 20px;
+    margin-inline: auto;
+    border-style: none none solid none;
+}
+
+.box{
+    margin: 20px;
+    border-style: solid;
+    background-color: black;
+    color: azure;
+}
+
+.box ul{
+    list-style-type: none;
+}
+
+.all-projects{
+    margin-top: 100px;
+    margin-inline: auto;
+    width: 50%;
+    color: azure;
+}
+
+
+.project-list{
+    display: grid;
+    align-items: center;
+    padding: 0;
+}
+
+
+/*
+    PROJECT LINKS
+*/
+.project-link{
+    margin-inline: 2.5px;
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    color: white;
+}
+
+.list-item-container{
+    width: 70%;
+    margin-inline:auto;
+}
+
+.list-item{
+    display: flex;
+    justify-content: space-between;
+}
+#projectId{
+    color: #ffffff42;
+}
+
+.all-projects{
+    display: none;
+}
+
+#left-arrow{
+    align-self: flex-start;
+}
+#right-arrow{
+    align-self: flex-end;
+}
+
+
+/*
+    ADD NEW PROJECT
+*/
+.formi{
+    margin-inline: auto;
+    width: 50%;
+    padding: 20px;
+    color: azure;
+    background-color: black;
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+                    "a1 b1 b1 b1"
+                    "a2 b2 b2 b2"
+                    "-  -  -  d";
+}
+#label-name{
+    grid-area: a1;
+}
+#label-desc{
+    grid-area: a2;
+}
+#input-name{
+    height: 2rem;
+    grid-area: b1;
+}
+
+#input-desc{
+    height: 100px;
+    grid-area: b2;
+    text-align: left;
+}
+
+.submitBtn{
+    background-color: azure;
+    color: black;
+    width: 200px;
+    grid-area: d;
+    justify-self: end;
+}
