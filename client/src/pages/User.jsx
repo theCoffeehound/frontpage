@@ -14,8 +14,8 @@ function User() {
 
     return(
         <div>
-            <h1>User</h1>
-            <p>{user.con_nimi}</p>
+            <h1 className="Main-title">User</h1>
+            <p>{user.con_token}</p>
         </div>
     );
 }

@@ -57,7 +57,16 @@ function Frontpage() {
     return (
       <div className='frontpage'>
         
-        <h1>HELLO!</h1>
+        <h1 className='Main-title'>HELLO {user.con_token}!</h1>
+        <div className='bookmarks-container'>
+        <div className='bookmarks'>
+            <a className='linkki' id='yt' href="https://www.youtube.com">YouTube</a>
+            <a className='linkki' id='yle' href="https://www.yle.fi">Yle</a>
+            <a className='linkki' id='reddit' href="https://www.reddit.com">Reddit</a>
+            <a className='linkki' id='mail' href="https://www.mail.google.com">Mail</a>
+            <a className='linkki' id='dim' href="https://app.destinyitemmanager.com">DIM</a>
+        </div>
+      </div>
       </div>
     );
   };

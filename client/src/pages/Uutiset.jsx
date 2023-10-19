@@ -14,7 +14,7 @@ function Uutiset() {
 
     return(
         <div className="uutis-kontti">
-            <h1 className="title">Uutiset</h1>
+            <h1 className="Main-title title">Uutiset</h1>
             <p>{user.con_nimi}</p>
         </div>
     );

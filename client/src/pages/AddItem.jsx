@@ -50,7 +50,7 @@ function AddItem() {
 
     return(
         <>
-            <h1>Lisää puhdistus</h1>
+            <h1 className="Main-title">Lisää puhdistus</h1>
             <div>
 
             </div>

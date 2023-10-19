@@ -20,7 +20,7 @@ function Authentication(){
                 
             </div>
             <div className="teksti">
-
+                <p>This thing comes with absolutely no WARRENTY!</p>
             </div>
         </div>
     );
