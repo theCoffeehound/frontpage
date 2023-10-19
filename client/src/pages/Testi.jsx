@@ -5,7 +5,9 @@ import { UserContext } from "../contexts/UserContext";
 import "../styles/Home.css"
 import kuva from "../images/background_2.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import uuti from "../components/uutisProcess";
 import axios from 'axios';
+import jason from '../yleapitest.json';
 
 function Testi() {
 
@@ -824,27 +826,31 @@ function Testi() {
     ] 
 
 
+
+
     const getUutiset = () => {
         let data = array[0].teletext.page.subpage[0].content[0].line[1].Text
         let uutiset1 = array[0].teletext.page.subpage[0].content[0].line
         console.log(data)
         console.log(uutiset1)
-        console.log(uutiset1[5].Text)
+        console.log("Uutiset[5]: " + uutiset1[5].Text)
 
         
         let kaikkiUutiset = []
 
-        for(let i = 0; i >= uutiset1.length; i++){
-            console.log(uutiset1.line[i].Text)
-            kaikkiUutiset[i] = uutiset1.line[i].Text
-        };
-
+        // var page = JSON.parse(jason);
+        console.log("Uutis format testi: ")
+        for(let i = 0; i <= 20; i++){
+            console.log(jason.teletext.page.subpage[0].content[0].line[i].Text);
+        }
+        console.log("Uutis format testi: ")
         console.log(kaikkiUutiset)
     }
 
 
     useEffect(() => {
         getUutiset();
+        console.log(uuti);
         console.log("Tokeni", user.con_token)
     }, []);
 
