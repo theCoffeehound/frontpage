@@ -1,8 +1,9 @@
 .newsline{
     display: grid;
-    width: 100%;
+    width: 50%;
     justify-content: center;
     margin-inline: auto;
+    border-style: solid;
 }
 
 .newsline p{
