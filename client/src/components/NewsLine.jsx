@@ -17,9 +17,8 @@ function NewsLine() {
                 // Extract the text from each line object and create a new array
                 const textLines = lines.map((line) => line.Text);
                 const filteredTextLines = textLines.filter((line) => line != null);
-                const newTextLines = filteredTextLines.filter((line, index) => index > 2);
-                const trimmedTextLines = newTextLines.slice(0, newTextLines.length - 5);
-                setData(trimmedTextLines);
+                const filteredLines = filteredTextLines.filter((line) => !/^\s*([A-Za-z]|101|201|300|799)/.test(line));//!/^\s*(101|201|300|799)/.test(line));
+                setData(filteredLines);
             } else {
                 console.log("Network property not found in the JSON data");
             }

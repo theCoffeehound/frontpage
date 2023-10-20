@@ -58,7 +58,7 @@ function Frontpage() {
   return (
     <div className='frontpage'>
         
-    <h1 className='Main-title'>HELLO {user.con_token}!</h1>
+    <h1 className='Main-title'>HELLO {user.con_token != null ? 'User' : user.con_token}!</h1>
     <div className='bookmarks-container'>
     <div className='bookmarks'>
         <a className='linkki' id='yt' href="https://www.youtube.com">YouTube</a>
