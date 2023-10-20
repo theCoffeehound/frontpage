@@ -12,7 +12,7 @@ Frontpage on henkilökohtaiseen käyttöön tuleva nettisivu, johon kasaan itsel
 - käynnistä "npm start" komennolla
 
 ### Backend
-- npm install cors express mongoose nodemon dotenv
+- npm install cors express mongoose nodemon dotenv axios
 - Luo config.env tiedosto backend kansioon
 - Aseta config.env sisään seuraavat muuttujat oman tarpeesi mukaan
     - dbURI=<database osoite>
