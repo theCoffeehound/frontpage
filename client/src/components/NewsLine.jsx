@@ -7,7 +7,7 @@ function NewsLine() {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/fetchNews'); // Replace with the correct API endpoint
+            const response = await axios.get('http://localhost:5000/api/yle'); // Replace with the correct API endpoint
             if (
                 response.data.teletext &&
                 response.data.teletext.page.subpage[0].content[0].line
