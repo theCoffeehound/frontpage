@@ -58,8 +58,11 @@
     text-decoration: none;
     color: black;
     border-radius: 15px;
-    filter: drop-shadow(5px 1px 4px #e0e0e0);
+    /* filter: drop-shadow(5px 1px 4px #e0e0e0); */
     background-color: #c8d8e4;
+}
+.newsTitle{
+    margin-block: 20px;
 }
 
 

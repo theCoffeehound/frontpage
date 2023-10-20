@@ -1,0 +1,14 @@
+.newsline{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.newsline p{
+    display: inline;
+    width: 100%;
+    color: azure;
+    margin-inline: auto;
+    text-align: left;
+}
