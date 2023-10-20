@@ -38,7 +38,10 @@ table {
 
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #dddddd33;
+}
+tr:nth-child(odd) {
+    background-color: #dddddd5d;
 }
 
 td{
@@ -63,4 +66,5 @@ td{
     font-size: 1em;
     width: 10em;
     height: auto;
+    background-color: #dddddd81;
 }
