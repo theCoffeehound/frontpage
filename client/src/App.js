@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-
+import ima from './images/IMG_3024.JPG'
 import logo from './logo.svg';
 import './styles/App.css';
 import Testi from './pages/Testi'
@@ -34,6 +34,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <img src={ima} className='background-image'/>
         <UserProvider>
           <Navbar />
           <Routes>

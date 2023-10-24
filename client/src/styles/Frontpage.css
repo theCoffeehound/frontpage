@@ -11,10 +11,11 @@
 
 .Main-title{
     text-transform: uppercase;
+    color: #c8d8e4;
 }
 
 .otsikko{
-    background-color: #2b6777;
+    /* background-color: #2b6777; */
     background-image: url('../images/IMG_3263.jpeg');
     background-size: 100%;
     color: #f2f2f2;

@@ -1,7 +1,21 @@
 .App{
   margin-top: 0%;
+  /* background-image: url('../images/IMG_3024.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto; */
 }
 .App .Main-title{
   margin-top: 8rem;
   text-align: center;
+}
+
+.background-image{
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  filter: blur(50px);
+  background-size: cover;
+  transform: scale(1.1); 
 }
