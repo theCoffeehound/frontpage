@@ -1,5 +1,7 @@
 body, html{
   /* background-color: #3c4652 !important;  */
+  /*  Used to hide x-axel overflow that the backgorund-image creates*/
+  overflow-x: hidden;
 }
 
 body {

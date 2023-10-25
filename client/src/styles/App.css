@@ -12,10 +12,11 @@
 }
 
 .background-image{
-  width: 100vw;
+  width: 100%;
   position: absolute;
+  background: no-repeat center center;
   z-index: -1;
   filter: blur(50px);
   background-size: cover;
-  transform: scale(1.1); 
+  transform: scale(1.5); 
 }

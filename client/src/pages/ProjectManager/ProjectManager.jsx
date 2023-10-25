@@ -7,13 +7,13 @@ import '../../styles/Projectmanager.css'
 
 function ProjectManager(){
     const [projects, setProjects] = useState([]);
-    const oma_url = "192.168.1.107:5000"
+    //const oma_url = "192.168.1.101:5000"
     const tila = ["idea", "dev", "rdy"];
     const [showForm, setShowForm] = useState(false);
     const [projectName, setProjectName] = useState("1");
     const [projectDesc, setProjectDesc] = useState("1");
     const [projectDate, setProjectDate] = useState();
-    const newProjectPhase = "idea";
+    const newProjectPhase = "idea";      
 
 
 
@@ -38,7 +38,7 @@ function ProjectManager(){
     //  GET request to API
     //  Fetch projects to frontpage
     const fetchProjects = async () => {
-        await axios.get(`http://${oma_url}/api/projects/`)
+        await axios.get(`http://localhost:5000/api/projects/`)
             .then(response => {
                 setProjects(response.data);
                 console.log("Projects were fetched:", response.status);
@@ -61,7 +61,7 @@ function ProjectManager(){
         console.log("Foo " + idmuuttuja);
         console.log("Bar " + phasemuuttuja);
         console.log("updateProject ajettu");
-        await axios.patch(`http://${oma_url}/api/projects/${idmuuttuja}`, { "phase": tila[index].toString() })
+        await axios.patch(`http://localhost:5000/api/projects/${idmuuttuja}`, { "phase": tila[index].toString() })
             .then(res => {
                 console.log("Viedään dataa tietokantaan muokkauksen jälkeen : " + idmuuttuja + " ja " + tila[index].toString());
                 console.log(res.data);
@@ -87,7 +87,7 @@ function ProjectManager(){
         console.log("Foo " + idmuuttuja);
         console.log("Bar " + phasemuuttuja);
         console.log("updateProject ajettu");
-        await axios.patch(`http://${oma_url}/api/projects/${idmuuttuja}`, { "phase": tila[index].toString() })
+        await axios.patch(`http://localhost:5000/api/projects/${idmuuttuja}`, { "phase": tila[index].toString() })
             .then(res => {
                 console.log("Viedään dataa tietokantaan muokkauksen jälkeen : " + idmuuttuja + " ja " + tila[index].toString());
                 console.log(res.data);
@@ -111,7 +111,7 @@ function ProjectManager(){
         console.log("Ajetaan POSTAUS")
         console.log("aika " + date)
         console.log("The current date is " + currentDate);
-        await axios.post(`http://${oma_url}/api/projects/add/`, {"name": projectName, "desc": projectDesc, "phase": newProjectPhase, "date": date})
+        await axios.post(`http://localhost:5000/api/projects/add/`, {"name": projectName, "desc": projectDesc, "phase": newProjectPhase, "date": date})
             .then(res => {
                 console.log(res.data);
                 console.log(res);
