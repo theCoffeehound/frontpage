@@ -2,13 +2,14 @@
     margin-top: 0px;
     padding-top: 10px;
     text-align: center;
-    background-color: #3c4652;
+    /* background-color: #3c4652; */
 }
 
 
 
-.main-title{
+.Main-title{
     font-size: 64px;
+    color: azure;
 }
 
 

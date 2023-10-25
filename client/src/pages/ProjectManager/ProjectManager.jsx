@@ -226,7 +226,7 @@ function ProjectManager(){
 
     return (
         <div className="Main-screen">
-            <h1 className="main-title">Project Manager</h1>
+            <h1 className="Main-title">Project Manager</h1>
 
             <div className="add-container">
                 <button onClick={() => { setShowForm(true) }} className="addbtn">Add new project</button>
