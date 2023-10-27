@@ -17,6 +17,7 @@ const projectRoutes = require('./routes/projectRoutes');
 const testRoutes = require('./routes/test-routes');
 const userRoutes = require('./routes/userRoutes.js');
 const itemRoutes = require('./routes/itemRoutes.js');
+const todoRoutes = require('./routes/todoRoutes.js');
 const uutisetRoutes = require('./routes/uutisetRoutes.js');
 
 
@@ -25,6 +26,8 @@ app.use("/api/projects", projectRoutes);
 app.use('/api/test', testRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/item', itemRoutes);
+app.use('/api/todo', todoRoutes);
+// News
 app.use('/api/yle', uutisetRoutes);
 
 console.log(`********************************************************`);

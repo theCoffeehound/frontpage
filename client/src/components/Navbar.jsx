@@ -56,7 +56,7 @@ function Navbar() {
                             <Link className='burger-link' to="/data" onClick={burgerFunction}>Käyttöjärjestelmä taulukko</Link>
                             <Link className='burger-link' to="/user" onClick={burgerFunction}>User</Link>
                             <Link className='burger-link' to="/home" onClick={burgerFunction}>alt home</Link>
-                            <Link className='burger-link' to="/uutiset" onClick={burgerFunction}>Uutiset</Link>
+                            <Link className='burger-link' to="/testi" onClick={burgerFunction}>Test-Ground</Link>
                         </>
                         :
                         <Link className='burger-link' to="/uutiset" onClick={burgerFunction}>Uutiset</Link>

@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import uuti from "../components/uutisProcess";
 import axios from 'axios';
 import jason from '../yleapitest.json';
+import AddTodo from "../components/AddTodoItem";
+import TodoList from "../components/TodoList";
 
 function Testi() {
 
@@ -856,15 +858,9 @@ function Testi() {
 
     return (
         <div>
-
-            <div className="bookmarks-container">
-                <h1>bookmarks</h1>
-            </div>
-            <div>
-                <h1>Uutiset</h1>
-                
-            </div>
-
+          <h1 className="Main-Title">TESTI</h1>
+          <AddTodo />
+          <TodoList />
         </div>
     );
 }
