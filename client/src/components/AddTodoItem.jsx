@@ -16,8 +16,10 @@ function AddTodoItem() {
           .catch(err => {
             console.log("Signup error:",err);
         });
+
             //  Lopuksi viedään käyttäjä tarina sivulle, jossa voi nähä heti uuden tarinan
-            window.location.reload();
+            
+            window.location.reload();   //// THIS IS STUPID, FIX IT
       };
 
 
