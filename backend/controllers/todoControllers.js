@@ -45,5 +45,32 @@ const addTodoItem = (req, res, next) => {
 
 
 
+const markTodoDone = async (req, res, next) => {
+
+    const item = await TodoItem.findById(req.params._id);
+  
+    if (!item) {
+      return (res.status(404).send("Tehtävää ei löytynyt"));
+    }
+    try {
+      const updateTodoItem = await TodoItem.findByIdAndUpdate(req.params._id,
+        {
+            status: "done"
+        }
+      );
+  
+      res.send(updateTodoItem);
+    }
+    catch (error) {
+      res.status(500).send(error.message);
+      console.log(error.message);
+    };
+  
+  };
+
+
+
+
+exports.markTodoDone = markTodoDone;
 exports.addTodoItem = addTodoItem;
 exports.getTodoItems = getTodoItems;

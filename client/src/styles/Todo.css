@@ -1,0 +1,36 @@
+.todo-container{
+    width: 40vw;
+    display: flex;
+    margin-inline: auto;
+}
+
+.center-container{
+    display: flex;
+    margin: auto;
+}
+
+.todo-board{
+    background-color: rgba(114, 114, 114, 0.199);
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+.addTodo{
+    display: flex;
+    flex-direction: column;
+}
+
+.addTodo h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.todo-list, .todo-list a{
+    margin-left: 10px;
+}
+
+#todo-dot:hover{
+    background-color: white;
+}
