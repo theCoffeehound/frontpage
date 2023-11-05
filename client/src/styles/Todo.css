@@ -1,36 +1,84 @@
-.todo-container{
-    width: 40vw;
-    display: flex;
+.addTodo{
+    width: 50%;
     margin-inline: auto;
 }
-
-.center-container{
-    display: flex;
-    margin: auto;
-}
-
-.todo-board{
-    background-color: rgba(114, 114, 114, 0.199);
+.todo-form form{
     display: grid;
-    justify-self: center;
-    align-self: center;
-}
-.addTodo{
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr 9fr;
+    grid-gap: 2rem;
+    border-style: none none solid;
+    border-color: rgba(201, 201, 201, 0.5);
+    border-width: 0.1px;
 }
 
-.addTodo h1{
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0;
+.todo-form form input{
+    color: azure;
+    border: none;
+    background-color:rgba(201, 201, 201, 0);
+}
+
+.todo-form form button{
+    font-size: 1.4rem;
+    border: none;
+    color: azure;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.todo-item{
+    margin-block: 5px;
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-gap: 2rem;
+    text-align: left;
+}
+
+
+
+.todo-item a, span{
+    color: azure;
+    text-align: left;
+}
+
+.todo-list{
+    display: block;
+    margin-inline: auto;
+    width: 50%;
+    /* border-style: solid;
+    border-color: azure; */
+    /* background-color: rgba(145, 145, 145, 0.13);*/
+}
+
+.dot{
+    cursor: pointer;
+    text-decoration: none;
+    color: azure;
+    text-align: center !important;
+}
+.dot:hover{
+    color: rgba(145, 145, 145, 0.438);
+}
+
+
+#todo-text{
+    cursor: default;
+}
+
+.description-text{
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(244, 250, 160);
+    color: black;
     text-align: center;
+    margin-left: 50px;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below!*/
+    position: absolute;
+    z-index: 1;
 }
 
-.todo-list, .todo-list a{
-    margin-left: 10px;
-}
-
-#todo-dot:hover{
-    background-color: white;
-}
+#todo-text:hover .description-text{
+    visibility: visible;
+} 

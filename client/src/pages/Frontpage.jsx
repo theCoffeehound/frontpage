@@ -1,8 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 import '../styles/Frontpage.css';
-import kuva from '../images/background_2.jpg';
 import { UserContext } from '../contexts/UserContext';
 import NewsLine from '../components/NewsLine';
+import Todo from '../components/Todo.jsx';
 function Frontpage() {
 
   const { user, setUser } = useContext(UserContext);
@@ -57,22 +57,28 @@ function Frontpage() {
 
   return (
     <div className='frontpage'>
-        
-    <h1 className='Main-title'>HELLO {user.con_token == (null || "") ? 'User' : user.con_token}!</h1>
-    <div className='bookmarks-container'>
-    <div className='bookmarks'>
-        <a className='linkki' id='yt' href="https://www.youtube.com">YouTube</a>
-        <a className='linkki' id='yle' href="https://www.yle.fi">Yle</a>
-        <a className='linkki' id='reddit' href="https://www.reddit.com">Reddit</a>
-        <a className='linkki' id='mail' href="https://www.mail.google.com">Mail</a>
-        <a className='linkki' id='dim' href="https://app.destinyitemmanager.com">DIM</a>
+
+      <h1 className='Main-title'>HELLO {user.con_token == (null || "") ? 'User' : user.con_token}!</h1>
+      <div className='bookmarks-container'>
+        <div className='bookmarks'>
+          <a className='linkki' id='yt' href="https://www.youtube.com">YouTube</a>
+          <a className='linkki' id='yle' href="https://www.yle.fi">Yle</a>
+          <a className='linkki' id='reddit' href="https://www.reddit.com">Reddit</a>
+          <a className='linkki' id='mail' href="https://www.mail.google.com">Mail</a>
+          <a className='linkki' id='dim' href="https://app.destinyitemmanager.com">DIM</a>
+        </div>
+      </div>
+      <div className='part-two'>
+        <div className='news-container-front'>
+          <h1 className='newsTitle'>uutiset</h1>
+          <NewsLine />
+        </div>
+        <div className='todo-container-front'>
+          <h1 className='todoTitle'>todo</h1>
+          <Todo />
+        </div>
+      </div>
     </div>
-  </div>
-  <div className='news-container'>
-    <h1 className='newsTitle'>Uutiset</h1>
-    <NewsLine />
-  </div>
-  </div>
   );
 };
 

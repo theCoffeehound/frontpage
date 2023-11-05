@@ -4,7 +4,7 @@ import CookieFetcher from "../components/cookieFetch";
 import { UserContext } from "../contexts/UserContext";
 import "../styles/Home.css"
 import kuva from "../images/background_2.jpg";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
 function Home() {
